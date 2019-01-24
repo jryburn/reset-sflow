@@ -24,7 +24,7 @@ print('sflow data pulled from device')
 
 reset_flow = False                 
 for i in result.xpath('.//interface-adapt-sample-rate-ingress'):       
-    if i.text > '4096':            
+    if int(i.text) > 4096:            
         reset_flow = True          
 
 # Set sampling rate back to 4096   
