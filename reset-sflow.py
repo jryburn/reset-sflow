@@ -1,7 +1,7 @@
 #! /usr/bin/env python3            
 
 # This script is designed to use check for my Juniper EX switch adapting its                                                                  
-# sflow rate to something other than 4096 for and put it back to 4096  
+# sflow rate to something other than 2048 for and put it back to 2048 
 #                                  
 # Written by: Justin Ryburn (justin@ryburn.org)                        
 
@@ -24,10 +24,10 @@ print('sflow data pulled from device')
 
 reset_flow = False                 
 for i in result.xpath('.//interface-adapt-sample-rate-ingress'):       
-    if int(i.text) > 4096:            
+    if int(i.text) > 2048:            
         reset_flow = True          
 
-# Set sampling rate back to 4096   
+# Set sampling rate back to 2048   
 if reset_flow is True:             
     # Disable sflow protocol       
     print('Disabling sflow')       
