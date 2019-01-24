@@ -1,5 +1,5 @@
 # reset-sflow
-Juniper Networks switches uses an Adaptative Sampling Rate that increases the sampling rate when the CPU is busy to protect the switch. However, the sampling rate does not come back down when the CPU comes back down. This script is designed to be run on a cronjob to check the sampling rate (4096 in my case) once a day and reset it if it has increased.
+Juniper Networks switches uses an Adaptative Sampling Rate that increases the sampling rate when the CPU is busy to protect the switch. However, the sampling rate does not come back down when the CPU comes back down. This script is designed to be run on a cronjob to check the sampling rate (2048 in my case) once a day and reset it if it has increased.
 
 # Adaptive Sampling
 
